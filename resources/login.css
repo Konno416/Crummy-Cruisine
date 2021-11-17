@@ -4,20 +4,10 @@
     margin: 0;
 }
 
+*:focus {outline: none;}
+
 body {
     font-family: "Open Sans"
-}
-
-.daHead {
-    border-bottom: 2px solid orange;
-    background-color: black;
-    height: 96vh;
-}
-
-.footer {
-    border-top: 2px solid orange;
-    height: 60vh;
-    background-color: gray;
 }
 
 .nav-bar {
@@ -47,4 +37,24 @@ body {
 .nav-item:hover {
     color: orange;
     transition: .5s;
+}
+
+.main {
+    display: flex;
+}
+
+.main-box {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 10%;
+    border: 1px solid red;
+}
+
+.header {
+    text-align: center;
+}
+
+.input {
+    margin-top: 2%;
 }
