@@ -3,6 +3,20 @@
     padding: 0;
     margin: 0;
 }
+
 body {
     font-family: "Open Sans"
+}
+
+.daHead {
+    border-bottom: 2px solid orange;
+    background-color: black;
+    height: 96vh;
+}
+
+.footer {
+    border-top: 2px solid orange;
+    height: 60vh;
+    background-color: gray;
+
 }
