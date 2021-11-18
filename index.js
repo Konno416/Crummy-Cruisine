@@ -1,3 +1,8 @@
+$(document).ready(function(){
+    username = localStorage.getItem(username);
+    $("nav-name").text(username);
+})
+
 $("#sign-btn").click(function(){
     var username = $("#username").val();
     var password = $("#password").val();
@@ -6,6 +11,7 @@ $("#sign-btn").click(function(){
     console.log(username);
     console.log(password);
     $("#nav-name").text(username)
+    localStorage.setItem(username)
 })
 
 $("#log-btn").click(function(){
@@ -16,6 +22,5 @@ $("#log-btn").click(function(){
     console.log(username);
     console.log(password);
     $("#nav-name").text(username)
+    localStorage.setItem(username)
 })
-
-// $("#nav-name").text(username)
