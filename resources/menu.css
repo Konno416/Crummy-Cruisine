@@ -8,7 +8,7 @@ body {
     background-color: black;
     text-align: center;
     margin-top: 8%;
-    font-size: 210%;
+    font-size: 100%;
     color:white
 }
 
@@ -23,6 +23,7 @@ body {
     background-size: 202vh 100%;
     background-repeat: no-repeat;
     height: 50vh;
+    margin-top: 1%;
     
 }
 .flexbox-container2 {
@@ -33,9 +34,9 @@ body {
     
 }
 .flexbox-item2 {
-height: 170px;
-    width: 200px;
-    margin: 20px;
+height: 100%;
+    width: 85%;
+    margin: 10%;
     margin-top: 40%;
     border: 3px hidden #333;
     background-color: #dfdfdf ;
@@ -44,32 +45,32 @@ height: 170px;
     background-color: white;
     color: black;
     align-self: center;
-    width: 250px;
+    width: 85%;
 }
 .flexbox-item-7 {
     
     background-color: white;
     color: black;
-    width: 250px;
+    width: 85%;
 }
 .flexbox-item-8 {
     
     background-color: white;
     color: black;
-    width: 250px;
+    width: 85%;
     
 }
 .flexbox-item-9 {
   
     background-color: white;
     color: black;
-    width: 250px;
+    width: 85%;
     
 }
 .flexbox-item3 {
-    height: 170px;
-        width: 200px;
-        margin: 20px;
+    height: 23vh;
+        width: 85%;
+        margin: 10%;
         margin-top: 20%;
         border: 3px hidden #333;
         background-color: #dfdfdf ;
@@ -81,6 +82,7 @@ height: 170px;
     background-color: black;
     display: flex;
     align-items: center;
+    margin-top: -7%;
 }
 
 .nav-div {
