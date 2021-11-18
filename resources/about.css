@@ -46,7 +46,11 @@ body {
     word-spacing:normal;
     text-align: center;
 }
+
 .down {
+    margin-top: 60%;
+}
+.down2 {
     margin-top: 7%;
 }
 
