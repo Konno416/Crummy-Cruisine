@@ -86,3 +86,70 @@ body {
     color: orange;
     transition: .5s;
 }
+
+
+.footer {
+    border-top: 2px solid orange;
+    height: 60vh;
+    background-color: rgb(83, 83, 83);
+    overflow: hidden;
+}
+
+.feedback-section {
+    display: flex;
+    justify-content: center;
+    height: 25vh;
+    margin-top: 10vh;
+}
+
+.made-in-abyss {
+    text-align: center;
+    margin-top: 5vh;
+    font-size: 200%;
+}
+
+.foot-link-one {
+    color: orange;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.foot-link-one:hover {
+    color: white;
+    transition: 0.2s;
+}
+
+.foot-email {
+    height: 20vh;
+    width: 35%;
+}
+
+.feed {
+    text-align: center;
+    color: orange;
+    margin-top: 2vh;
+}
+
+.fo {
+    text-align: center;
+    margin-top: 3vh;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: white;
+    font-size: 120%;
+    transition: 0.3s;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+    color: orange;
+    transition: 0.2s;
+}
+
+.trademark {
+    text-align: center;
+    color: white;
+    margin-top: 10vh;
+}
