@@ -1,7 +1,10 @@
-$(document).ready(function(){
-    username = localStorage.getItem(username);
-    $("nav-name").text(username);
-})
+
+function store() {
+    localStorage.setItem()
+}
+
+
+
 
 $("#sign-btn").click(function(){
     var username = $("#username").val();
