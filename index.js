@@ -1,22 +1,4 @@
- $("#sign-btn").click(function(){
-     var username = $("#username").val();
-     var password = $("#password").val();
-     $("#username").val("");
-     $("#password").val("");
-     console.log(username);
-     console.log(password);
-     $("#nav-name").text(username)
- })
-
- $("#log-btn").click(function(){
-     var username = $("#username").val();
-     var password = $("#password").val();
-     $("#username").val("");
-     $("#password").val("");
-     console.log(username);
-     console.log(password);
-     $("#nav-name").text(username)
- })
+const storedName = localStorage.getItem("username");
 
 window.addEventListener("scroll" , function() {
     var header = document.querySelector("header");
@@ -24,24 +6,21 @@ window.addEventListener("scroll" , function() {
   
   });
 
-// $("#nav-name").text(username)
 
-function store() {
-    localStorage.setItem()
-}
-
-
-
+$(document).ready(function(){
+    $("#nav-name").text(storedName)
+})
 
 $("#sign-btn").click(function(){
     var username = $("#username").val();
     var password = $("#password").val();
+    localStorage.setItem("username", username)
+    localStorage.setItem("password", password)
     $("#username").val("");
     $("#password").val("");
     console.log(username);
     console.log(password);
-    $("#nav-name").text(username)
-    localStorage.setItem(username)
+    $("#nav-name").text(username);
 })
 
 $("#log-btn").click(function(){
@@ -51,6 +30,6 @@ $("#log-btn").click(function(){
     $("#password").val("");
     console.log(username);
     console.log(password);
-    $("#nav-name").text(username)
-    localStorage.setItem(username)
+    $("#nav-name").text(username);
+    localStorage.setItem(username);
 })
