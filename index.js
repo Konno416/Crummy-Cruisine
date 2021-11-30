@@ -8,28 +8,27 @@ window.addEventListener("scroll" , function() {
 
 
 $(document).ready(function(){
-    $("#nav-name").text(storedName)
+   $("#nav-name").text(storedName)
 })
 
 $("#sign-btn").click(function(){
     var username = $("#username").val();
     var password = $("#password").val();
-    localStorage.setItem("username", username)
-    localStorage.setItem("password", password)
+    localStorage.setItem("username", username);
+    localStorage.setItem("password", password);
     $("#username").val("");
     $("#password").val("");
-    console.log(username);
-    console.log(password);
     $("#nav-name").text(username);
 })
 
 $("#log-btn").click(function(){
-    var username = $("#username").val();
-    var password = $("#password").val();
-    $("#username").val("");
-    $("#password").val("");
-    console.log(username);
-    console.log(password);
-    $("#nav-name").text(username);
-    localStorage.setItem(username);
+    var username = $("#username-log").val();
+    var password = $("#password-log").val();
+    if (username === "Admin" && password === "password01"){
+        localStorage.setItem("username", username);
+        localStorage.setItem("password", password);
+        $("#username-log").val("");
+        $("#password-log").val("");
+        $("#nav-name").text(username);
+    }
 })
