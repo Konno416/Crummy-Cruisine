@@ -6,7 +6,7 @@
 
 body {
     font-family: "Open Sans";
-    background-color: black;
+    background-color: rgb(87, 87, 87);
 }
 
 .daHead {
@@ -119,7 +119,7 @@ body {
     margin-top: 10vh;
 }
 
-/* header {
+ header {
     position: fixed;
     top: 0;
     left: 0;
@@ -169,6 +169,3 @@ header.sticky .logo,
 header.sticky ul li a {
     color: #000;
 }
-.fromtop {
-    margin-top: 150%;
-} */
