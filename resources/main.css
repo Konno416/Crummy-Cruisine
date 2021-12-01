@@ -11,7 +11,6 @@ body {
 
 .daHead {
     border-bottom: 2px solid orange;
-    /* background-color: white; */
     background-image: linear-gradient(rgba(70, 83, 82, 0.7), rgba(70, 83, 82, 0.7)),
     url("https://media4.giphy.com/media/26FL1soZ3STRDSLGU/giphy.gif ");
     background-repeat: no-repeat;
@@ -22,7 +21,15 @@ body {
 .welcome {
     text-align: center;
     color: white;
+    padding-top: 35vh;
+    font-size: 300%;
+}
 
+.wel {
+    font-size: 150%;
+    text-align: center;
+    color: white;
+    padding-top: 5vh;
 }
 
 .nav-bar {
@@ -171,3 +178,26 @@ header.sticky ul li a {
     color: #000;
 }
 
+.checkOut {
+    height: 80vh;
+    background-color: (87, 87, 87);
+    border-bottom: 2px solid orange;
+}
+
+.checkHead {
+    text-align: center;
+    padding-top: 10vh;
+    font-size: 200%;
+    color: orange;
+    text-decoration: underline;
+    letter-spacing: 4;
+}
+
+.checkPara {
+    color: white;
+    padding-top: 5vh;
+    margin-left: 25%;
+    font-size: 130%;
+    width: 50%;
+    text-align: center;
+}
