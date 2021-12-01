@@ -9,15 +9,16 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <header>
-        <nav class="nav-bar">
-            <div class="nav-div">
-                <h3><a class="nav-item" href="index.html">Home</a></h3>
-                <h3><a class="current-nav-item" href="menu.html">Menu</a></h3>
-                <h3><a class="nav-item" href="about.html">About Us</a></h3>
-                <h3><a href="login.html" class="nav-item" id="nav-name">Login/Sign Up</a></h3>
-            </div>
-        </nav>
-    </header>
+        <p> <a href="index.html" class="logo">Crummy Cuisine</a></p>
+        <ul>
+        <li><a class="nav-item" href="index.html">Home</a></li>
+        <li><a class="current-nav-item" href="menu.html">Menu</a></li>
+        <li><a class="nav-item" href="about.html">About Us</a></li>
+        <li><a href="login.html" class="nav-item" id="nav-name">Login/Sign Up</a></li>
+        </ul>
+    </div>
+</nav>
+</header>
     
 
 
@@ -26,9 +27,9 @@
         <h1 class="space">Words placeholder (food Description here)</h1>
         <section>
         <div class="flexbox-container2">
-            <div><img class="flexbox-item2 flexbox-item-6" src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"><h3>food</h3><h4>Price</h4></div>
-            <div><img class="flexbox-item2 flexbox-item-7" src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"><h3>food</h3><h4>Price</h4></div>
-            <div><img class="flexbox-item2 flexbox-item-7" src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"><h3>food</h3><h4>Price</h4></div>
+            <div class="food-div"><img class="flexbox-item2 flexbox-item-6" src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"><h3 class="item-name">Chicken Tenders</h3><h4 class="item-price">7.99</h4></div>
+            <div class="food-div"><img class="flexbox-item2 flexbox-item-7" src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"><h3 class="item-name">Chicken Sandwich</h3><h4 class="item-price">10.99</h4></div>
+            <div class="food-div"><img class="flexbox-item2 flexbox-item-7" src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"><h3 class="item-name">food</h3><h4 class="item-price">Price</h4></div>
             <div><img class="flexbox-item2 flexbox-item-8" src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"><h3>food</h3><h4>Price</h4></p></div>
             <div><img class="flexbox-item2 flexbox-item-9" src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"><h3>food</h3><h4>Price</h4></div>
             </div>
@@ -88,7 +89,7 @@
             <div class="cart-items">
                 <div class="items"><p>Chimken</p><p>$4.99</p></div>
             </div>
-            <div class="total"><p>Total:</p><p id="total"></p></div>
+            <div class="total"><p>Total: $</p><p id="total">4.50</p></div>
         </section>
 
         <footer class="footer">

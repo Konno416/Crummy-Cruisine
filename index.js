@@ -8,7 +8,18 @@ window.addEventListener("scroll" , function() {
 
 
 $(document).ready(function(){
-   $("#nav-name").text(storedName)
+    if(storedName != null){
+        $("#nav-name").text(storedName)
+    }
+   
+})
+
+$(".food-div").click(function(){
+    var item = $(".item-name").text();
+    var price = $(".item-price").text();
+    console.log(item);
+    console.log(price);
+    alert("Item has been added to cart")
 })
 
 $("#sign-btn").click(function(){
