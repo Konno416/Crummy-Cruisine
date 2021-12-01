@@ -6,16 +6,17 @@
 
 body {
     font-family: "Open Sans";
-    background-color: black;
+    background-color: rgb(87, 87, 87);
 }
 
 .daHead {
     border-bottom: 2px solid orange;
+    /* background-color: white; */
     background-image: linear-gradient(rgba(70, 83, 82, 0.7), rgba(70, 83, 82, 0.7)),
     url("https://media4.giphy.com/media/26FL1soZ3STRDSLGU/giphy.gif ");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 96vh;
+    height: 100vh;
 }
 
 .welcome {
@@ -169,6 +170,4 @@ header.sticky .logo,
 header.sticky ul li a {
     color: #000;
 }
-.fromtop {
-    margin-top: 150%;
-}
+
