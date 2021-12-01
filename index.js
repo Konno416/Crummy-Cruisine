@@ -14,6 +14,14 @@ $(document).ready(function(){
    
 })
 
+$(".food-div").click(function(){
+    var item = $(".item-name").text();
+    var price = $(".item-price").text();
+    console.log(item);
+    console.log(price);
+    alert("Item has been added to cart")
+})
+
 $("#sign-btn").click(function(){
     var username = $("#username").val();
     var password = $("#password").val();
