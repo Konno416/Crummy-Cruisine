@@ -181,11 +181,6 @@ height: 100%;
     color: black;
 }
 
-.header {
-    text-align: center;
-    margin-top: 5%;
-}
-
 .cart-items {
     display: flex;
     flex-direction: column;
@@ -196,8 +191,4 @@ height: 100%;
     justify-content: space-evenly;
 }
 
-.total {
-    margin-top: 4%;
-    display: flex;
-    justify-content: center;
 }
