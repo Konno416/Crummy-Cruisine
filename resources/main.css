@@ -11,8 +11,17 @@ body {
 
 .daHead {
     border-bottom: 2px solid orange;
-    background-color: blue;
+    background-image: linear-gradient(rgba(70, 83, 82, 0.7), rgba(70, 83, 82, 0.7)),
+    url("https://media4.giphy.com/media/26FL1soZ3STRDSLGU/giphy.gif ");
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 96vh;
+}
+
+.welcome {
+    text-align: center;
+    color: white;
+
 }
 
 .nav-bar {
@@ -110,7 +119,7 @@ body {
     margin-top: 10vh;
 }
 
-header {
+/* header {
     position: fixed;
     top: 0;
     left: 0;
@@ -162,4 +171,4 @@ header.sticky ul li a {
 }
 .fromtop {
     margin-top: 150%;
-}
+} */
