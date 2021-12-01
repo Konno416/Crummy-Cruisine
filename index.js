@@ -8,7 +8,10 @@ window.addEventListener("scroll" , function() {
 
 
 $(document).ready(function(){
-   $("#nav-name").text(storedName)
+    if(storedName != null){
+        $("#nav-name").text(storedName)
+    }
+   
 })
 
 $("#sign-btn").click(function(){
