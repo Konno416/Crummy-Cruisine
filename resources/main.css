@@ -180,7 +180,7 @@ header.sticky ul li a {
 }
 
 .checkOut {
-    height: 80vh;
+    height: 85vh;
     background-color: (87, 87, 87);
     border-bottom: 2px solid orange;
 }
@@ -191,7 +191,7 @@ header.sticky ul li a {
     font-size: 200%;
     color: orange;
     text-decoration: underline;
-    letter-spacing: 4;
+    letter-spacing: 0.2rem;
 }
 
 .checkPara {
@@ -202,3 +202,72 @@ header.sticky ul li a {
     width: 50%;
     text-align: center;
 }
+
+.checking {
+    font-size: 120%;
+    text-align: center;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.checkLink {
+    color: white;
+}
+
+.checkLink:link {
+    font-size: 120%;
+    text-decoration: none;
+    color: white;
+    transition: 0.2s;
+}
+
+.checkLink:hover { 
+    text-decoration: underline;
+    color: orange;
+    transition: 0.2s;
+}
+
+.checkFood {
+    display: flex;
+    height: 34vh;
+}
+
+.checkDiv {
+    height: 34vh;
+    width: 30%;
+    margin-left: 2.5%;
+    background-color: gray;
+    overflow: hidden;
+}
+
+.checkImages {
+    height: 34.5vh;
+    width: 100%;
+    margin: none;
+    padding: none;
+    opacity: 0.7;
+    overflow: hidden;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.checkImages:hover {
+    opacity: 1;
+    transform: scale(1.00);
+}
+
+.allAbout {
+    height: 80vh;
+    background-color: gray;
+    
+}
+
+.aboutHead {
+    text-align: center;
+    padding-top: 10vh;
+    font-size: 200%;
+    color: orange;
+    text-decoration: underline;
+    letter-spacing: 0.2rem;
+}
+
