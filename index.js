@@ -15,12 +15,36 @@ $(document).ready(function(){
 })
 
 $(".food-div").click(function(){
-    var item = $(".item-name").text();
-    var price = $(".item-price").text();
+    var div = $(this);
+    var item = div.children(".item-name").text();
+    var price = div.children(".item-price").text();
     console.log(item);
     console.log(price);
     alert("Item has been added to cart")
+    moveToCart(item,price)
+    updateTotal(price)
 })
+
+function moveToCart(item,price) {
+    var $div = $("<div>", {"class": "items"});
+    var name = "<p>";
+    name += item;
+    name += "</p>";
+    var cartPrice = "<p>";
+    cartPrice += price;
+    cartPrice += "</p>"
+    $(".cart-items").append($div);
+    $(".items").append(name);
+    $(".items").append(cartPrice);
+}
+
+function updateTotal(itemPrice){
+    var total = $("#total").val();
+    var newTotal = Number(total) + Number(itemPrice);
+    console.log(newTotal);
+    $("#total").val(newTotal);
+    $("#total").text(newTotal);
+}
 
 $("#sign-btn").click(function(){
     var username = $("#username").val();
