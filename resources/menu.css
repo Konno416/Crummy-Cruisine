@@ -14,6 +14,7 @@ body {
 
   .space {
       margin-top: 8%;
+      color: yellow;
   }
   .banner {
     position: relative;
@@ -34,43 +35,28 @@ body {
     
 }
 .flexbox-item2 {
-height: 100%;
+height: 30vh;
     width: 85%;
-    margin: 10%;
-    margin-top: 40%;
+    margin-top: 30%;
     border: 3px hidden #333;
     background-color: #dfdfdf ;
 }
+.flexbox-item-7 {
+    background-color: white;
+    color: black;
+    align-self: center;
+    width: 85%;
+}
+
 .flexbox-item-6 {
     background-color: white;
     color: black;
     align-self: center;
     width: 85%;
 }
-.flexbox-item-7 {
-    
-    background-color: white;
-    color: black;
-    width: 85%;
-}
-.flexbox-item-8 {
-    
-    background-color: white;
-    color: black;
-    width: 85%;
-    
-}
-.flexbox-item-9 {
-  
-    background-color: white;
-    color: black;
-    width: 85%;
-    
-}
 .flexbox-item3 {
-    height: 23vh;
+    height: 30vh;
         width: 85%;
-        margin: 10%;
         margin-top: 20%;
         border: 3px hidden #333;
         background-color: #dfdfdf ;
@@ -175,6 +161,7 @@ height: 100%;
 }
 
 .cart-section {
+    margin-top: 8%;
     width: 100%;
     height: 50vh;
     background-color: white;
