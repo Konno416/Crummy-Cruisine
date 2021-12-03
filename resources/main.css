@@ -264,10 +264,28 @@ header.sticky ul li a {
 
 .aboutHead {
     text-align: center;
-    padding-top: 10vh;
+    padding-top: 6vh;
     font-size: 200%;
     color: orange;
     text-decoration: underline;
     letter-spacing: 0.2rem;
 }
 
+.aboutPara {
+    text-align: center;
+    padding-top: 3vh;
+    font-size: 150%;
+    color: white;
+}
+
+.check {
+    text-align: center;
+    font-size: 120%;
+    padding-top: 1vh;
+}
+
+.abouts {
+    height: 30vh;
+    color: white;
+    display: flex;
+}
