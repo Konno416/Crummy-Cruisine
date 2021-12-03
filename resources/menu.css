@@ -273,3 +273,7 @@ header.sticky ul li a {
     display: flex;
     justify-content: center;
 }
+
+.quantity {
+    width: 3%;
+}
