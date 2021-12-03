@@ -27,15 +27,13 @@ $(".food-div").click(function(){
 
 function moveToCart(item,price) {
     var $div = $("<div>", {"class": "items"});
-    var name = "<p>";
-    name += item;
-    name += "</p>";
-    var cartPrice = "<p>";
-    cartPrice += price;
-    cartPrice += "</p>"
+    var name = $("<p>" + item + "</p>" , {"class": "cart-name"});
+    var cartPrice = $("<p>" + price + "</p>" , {"class": "cart-price"});
+    // var inp = $("<input>" , {"type": "number" , "class" : "quantity", "min" : "1"})
     $(".cart-items").append($div);
     $(".items").append(name);
     $(".items").append(cartPrice);
+    // $(".items").append(inp);
 }
 
 function updateTotal(itemPrice){
