@@ -11,8 +11,8 @@ body {
 
 .daHead {
     border-bottom: 2px solid orange;
-    background-image: linear-gradient(rgba(70, 83, 82, 0.7), rgba(70, 83, 82, 0.7)),
-    url("https://media4.giphy.com/media/26FL1soZ3STRDSLGU/giphy.gif ");
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    url("https://media1.giphy.com/media/7WDpgeYllwXWCTn0I8/source.gif");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -20,7 +20,7 @@ body {
 
 .welcome {
     text-align: center;
-    color: white;
+    color: black;
     padding-top: 35vh;
     font-size: 300%;
 }
@@ -28,7 +28,7 @@ body {
 .wel {
     font-size: 150%;
     text-align: center;
-    color: white;
+    color: black;
     padding-top: 5vh;
 }
 
