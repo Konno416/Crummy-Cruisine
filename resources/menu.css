@@ -242,3 +242,7 @@ header.sticky ul li a {
 .quantity {
     width: 3%;
 }
+
+.hidden {
+    display: none;
+}

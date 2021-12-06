@@ -79,9 +79,15 @@ body {
     color: black;
     background-color: orange;
 }
+
 .submit:hover {
     color: white;
 }
+
 .submit:active {
     box-shadow: 0 2px orange;
+}
+
+.hidden {
+    display: none;
 }
