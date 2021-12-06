@@ -5,7 +5,7 @@
 }
 body {
     font-family: "Open Sans";
-    background-color: black;
+    background-color:black;
     text-align: center;
     margin-top: 8%;
     font-size: 100%;
@@ -22,7 +22,7 @@ body {
     width: 80%;
     margin-left: 10%;
     font-size: 180%;
-    text-align: center;
+    text-align: left;
 }
 .banner {
     position: relative;
