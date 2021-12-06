@@ -1,4 +1,6 @@
 const storedName = localStorage.getItem("username");
+const storedPassword = localStorage.getItem("password");
+const nothing = "nothing"
 
 window.addEventListener("scroll" , function() {
     var header = document.querySelector("header");
@@ -9,21 +11,42 @@ window.addEventListener("scroll" , function() {
 
 $(document).ready(function(){
     if(storedName != null){
-        $("#nav-name").text(storedName)
+        $("#nav-name").text(storedName);
+    }
+    if(storedName != null){
+        $(".logout").removeClass("hidden");
+    }
+    if(storedName === "Admin" && storedPassword === "password01"){
+        $(".hidden").removeClass("hidden");
     }
    
 })
 
+function deleteSelf() {
+    console.log("this is worjichsigbvefwqobi")
+    $(this).closest('.div').remove();
+}
+
+$(".logout").click(function(){
+    $("#nav-name").text("Login/Sign Up")
+    localStorage.clear();
+})
+
 // Function to get values of name and price from food div
 $(".food-div").click(function(){
-    var div = $(this);
-    var item = div.children(".item-name").text();
-    var price = div.children(".item-price").text();
-    console.log(item);
-    console.log(price);
-    alert("Item has been added to cart")
-    moveToCart(item,price)
-    updateTotal(price)
+    if(storedName === "Admin" && storedPassword === "password01"){
+        return nothing
+    }
+    else {
+        var div = $(this);
+        var item = div.children(".item-name").text();
+        var price = div.children(".item-price").text();
+        console.log(item);
+        console.log(price);
+        alert("Item has been added to cart")
+        moveToCart(item,price)
+        updateTotal(price)
+    }
 })
 
 // Function to add items to cart on click
