@@ -20,10 +20,12 @@
         </div>
     </nav>
     </header>
+
         <section class="daHead">
             <h1 class="welcome">Welcome to Crummy Cuisine!</h1>
-            <p class="wel">Founded back in [REDACTED] and home to the legendary cook Joe Quinn!</p>
+            <p class="wel">Founded back in 1998 and home to the legendary cook Love Quinn!</p>
         </section>
+
         <section class="checkOut">
             <h2 class="checkHead">Check out our delicious menu items</h2>
             <p class="checkPara">We promise you won't regret your choices, with over 20 delicious
@@ -41,19 +43,55 @@
                 </div>
             </div>
         </section>
+
         <section class="allAbout">
             <h2 class="aboutHead">You should check what we are all about</h2>
             <div class="abouts">
-                <!-- <div class="aboutDiv1">
-                    <p class="aboutPara">Don't be scared to learn more about us and what we do!</p>
+                <div class="aboutDiv1">
+                    <p class="aboutPara">Don't be scared to learn more about us and what we do here
+                        at Crummy Cuisine!</p>
                     <p class="check"><a href="about.html" class="checkLink">More</a></p>
                 </div>
                 <div class="aboutDiv2">
-        
-                </div> -->
+                    <img class="Div2Img" src="resources/JoeQuinnHome.webp" alt="JoeMama">
+                </div>
             </div>
         </section>
-        <section class="customers"></section>
+
+        <section class="customer-review">
+            <div>
+                <h2 class="customers-review-title">Check out our customer reviews!</h2>
+            </div>
+            <div class="reviews-btns">
+                <button id="previous">PREVIOUS</button>
+                <p id="slash">/</p>
+                <button id="next">NEXT</button>
+            </div>
+            <div class="reviews">
+                <div class="review">
+                    <p class="review-para">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nostrum vitae explicabo dolore raione. Quia iure quod ipsa blanditiis sin nulla a nam veritatis ex eos. Dicta molestiae dolorum laudantium."</p>
+                    <div class="avatar-name">
+                        <img class="avatar" src="resources/images/person_7.jpg">
+                        <p class="name">Nick Andros</p>
+                    </div>
+                </div>    
+                <!-- <div class="client">
+                    <p class="client-para">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nostrum vitae explicabo dolore raione. Quia iure quod ipsa blanditiis sin nulla a nam veritatis ex eos. Dicta molestiae dolorum laudantium."</p>
+                    <div class="avatar-name">
+                        <img class="avatar" src="resources/images/person_5.jpg">
+                        <p class="name">Larry Underwood</p>
+                    </div>
+                </div>
+                <div class="client">
+                    <p class="client-para">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nostrum vitae explicabo dolore raione. Quia iure quod ipsa blanditiis sin nulla a nam veritatis ex eos. Dicta molestiae dolorum laudantium."</p>
+                    <div class="avatar-name">
+                        <img class="avatar" src="resources/images/person_8.jpg">
+                        <p class="name">Fran Goldsmith</p>
+                    </div>
+                </div> -->
+            </div>    
+        </section>
+
         <footer class="footer">
             <div class="feedback-section">
                 <div class="made-in-abyss"><h2><a class="foot-link-one" href="#">Crummy Cuisine</a></h2></div>
@@ -64,6 +102,19 @@
             </div>
             <div class="trademark">Copyright © [REDACTED] by Crummy Cuisine. All rights reserved.</div>
         </footer>
-        <script src="index.js"></script>
+        <script src="index.js">
+// $(document).ready(function(){
+//     $('.reviews').slick({
+//         infinite: true,
+//         slidesToShow: 1,
+//         slidesToScroll: 1,
+//         nextArrow: $('#next'),
+//         prevArrow: $('#previous'),
+//     });
+// });
+        </script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="slick/slick.min.js"></script>
     </body>
 </html>

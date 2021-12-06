@@ -11,8 +11,8 @@ body {
 
 .daHead {
     border-bottom: 2px solid orange;
-    background-image: linear-gradient(rgba(70, 83, 82, 0.7), rgba(70, 83, 82, 0.7)),
-    url("https://media4.giphy.com/media/26FL1soZ3STRDSLGU/giphy.gif ");
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    url("https://media1.giphy.com/media/7WDpgeYllwXWCTn0I8/source.gif");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -20,7 +20,7 @@ body {
 
 .welcome {
     text-align: center;
-    color: white;
+    color: black;
     padding-top: 35vh;
     font-size: 300%;
 }
@@ -28,7 +28,7 @@ body {
 .wel {
     font-size: 150%;
     text-align: center;
-    color: white;
+    color: black;
     padding-top: 5vh;
 }
 
@@ -181,7 +181,7 @@ header.sticky ul li a {
 
 .checkOut {
     height: 85vh;
-    background-color: (87, 87, 87);
+    background-color: rgb(87, 87, 87);
     border-bottom: 2px solid orange;
 }
 
@@ -191,7 +191,7 @@ header.sticky ul li a {
     font-size: 200%;
     color: orange;
     text-decoration: underline;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.1rem;
 }
 
 .checkPara {
@@ -268,14 +268,15 @@ header.sticky ul li a {
     font-size: 200%;
     color: orange;
     text-decoration: underline;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.1rem;
 }
 
 .aboutPara {
     text-align: center;
-    padding-top: 3vh;
+    padding-top: 10vh;
     font-size: 150%;
     color: white;
+    margin: 3vh;
 }
 
 .check {
@@ -285,7 +286,104 @@ header.sticky ul li a {
 }
 
 .abouts {
-    height: 30vh;
-    color: white;
+    margin: 5vh;
+    height: 58vh;
     display: flex;
+    justify-content: space-between;
+}
+
+.aboutDiv1 {
+    height: 58vh;
+    width: 45%;
+    background-color: rgb(87, 87, 87);
+}
+
+.aboutDiv2 {
+    height: 58vh;
+    width: 45%;
+    background-color: rgb(87, 87, 87);
+}
+
+.Div2Img {
+    width:100%;
+    height: 58vh;
+    opacity: 0.8;
+}
+
+.customers-review {
+    height: 100vh;
+    border-top: 2px solid orange;
+    overflow: hidden;
+}
+
+.customers-review-title {
+    color: orange;
+    text-align: center;
+    font-size: 200%;
+    padding-top: 10vh;
+    text-decoration: underline;
+    letter-spacing: 0.1rem;
+}
+
+.reviews-btns {
+    display: flex;
+    justify-content: space-evenly;
+    width: 150px;
+    height: 100px;
+    position: relative;
+    left: 1000px;
+    top: 100px;
+}
+
+#previous {
+    border: none;
+    background-color: white;
+    height: 20px;
+}
+
+#next {
+    border: none;
+    background-color: white;
+    height: 20px;
+}
+
+.clients {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 85px;
+    width: 1100px;
+    height: 80vh;
+    justify-content: center;
+}
+
+.client {
+    width: 100%;
+    padding-left: 160px;
+}
+
+.client-para {
+    color: gray;
+    font-size: 180%;
+    width: 800px;
+    text-align: center;
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.avatar-name {
+    display: flex;
+    margin-left: 300px;
+    margin-top: 50px;
+}
+
+.name {
+    color: gray;
+    font-size: 140%;
+    margin-top: 14px;
+    margin-left: 10px;
 }
