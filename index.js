@@ -14,6 +14,7 @@ $(document).ready(function(){
    
 })
 
+// Function to get values of name and price from food div
 $(".food-div").click(function(){
     var div = $(this);
     var item = div.children(".item-name").text();
@@ -25,24 +26,32 @@ $(".food-div").click(function(){
     updateTotal(price)
 })
 
+// Function to add items to cart on click
 function moveToCart(item,price) {
-    var $div = $("<div>", {"class": "items"});
-    var name = $("<p>" + item + "</p>" , {"class": "cart-name"});
-    var cartPrice = $("<p>" + price + "</p>" , {"class": "cart-price"});
+    // var $div = $("<div>", {"class": "items"});
+    var name = $("<p>" + item + "" + "$" + price + "</p>");
+    name.addClass("item");
+    // var cartPrice = $("<p>" + price + "</p>" , {"class": "cart-price"});
     // var inp = $("<input>" , {"type": "number" , "class" : "quantity", "min" : "1"})
-    $(".cart-items").append($div);
-    $(".items").append(name);
-    $(".items").append(cartPrice);
+    // $(".cart-items").append($div);
+    $(".cart-items").append(name);
+    // $(".items").append(cartPrice);
     // $(".items").append(inp);
 }
 
+// Updates total in cart whenever price changes are made
 function updateTotal(itemPrice){
     var total = $("#total").val();
     var newTotal = Number(total) + Number(itemPrice);
     console.log(newTotal);
-    $("#total").val(newTotal);
-    $("#total").text(newTotal);
+    $("#total").val(Math.round(newTotal * 100) / 100);
+    $("#total").text(Math.round(newTotal * 100) / 100);
 }
+
+$(".item").click(function(){
+    $(this).remove();    
+    console.log("working");
+})
 
 $("#sign-btn").click(function(){
     var username = $("#username").val();
