@@ -1,5 +1,6 @@
 const storedName = localStorage.getItem("username");
 const storedPassword = localStorage.getItem("password");
+const storedMenu = localStorage.getItem("menu");
 const nothing = "nothing"
 
 window.addEventListener("scroll" , function() {
@@ -19,17 +20,44 @@ $(document).ready(function(){
     if(storedName === "Admin" && storedPassword === "password01"){
         $(".hidden").removeClass("hidden");
     }
-   
+    // if(storedMenu != null){
+    //     $(".menu").html(storedMenu);
+    // }
 })
 
-function deleteSelf() {
-    console.log("this is worjichsigbvefwqobi")
-    $(this).closest('.div').remove();
-}
+// Saves menu page to local storage
+$(window).on("unload", function(){
+    if(storedName === "Admin" && storedPassword === "password01"){
+        menu = $(".menu");
+        localStorage.setItem("menu" , menu.html());
+    }
+    else {
+        return nothing
+    }
+})
 
+// Function that deletes parent div on click of delete button
+$(".btn-delete").click(function(){
+    $(this).parent().remove();
+})
+
+// Allows admin to edit menu options
+$(".btn-edit").click(function(){
+    console.log("edit");
+    var name = prompt("Item Name", "Name");
+    var price = prompt("Item Price", "Price");
+    var img = prompt("Picture URL", "Img URL");
+    var parent = $(this).parent();
+    parent.children(".item-name").text(name);
+    parent.children(".item-price").text(price);
+    parent.children("img").attr("src", img);
+})
+
+// Button to log out and clear local storage
 $(".logout").click(function(){
     $("#nav-name").text("Login/Sign Up")
-    localStorage.clear();
+    delete localStorage.username
+    delete localStorage.password
 })
 
 // Function to get values of name and price from food div
@@ -80,6 +108,7 @@ $("div").click(function(){
 })
 })
 
+// Sign in button adds name and password to local storage and name to nav bar
 $("#sign-btn").click(function(){
     var username = $("#username").val();
     var password = $("#password").val();
@@ -90,6 +119,7 @@ $("#sign-btn").click(function(){
     $("#nav-name").text(username);
 })
 
+// Admin login
 $("#log-btn").click(function(){
     var username = $("#username-log").val();
     var password = $("#password-log").val();
