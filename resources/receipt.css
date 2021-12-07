@@ -1,0 +1,262 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: "Open Sans";
+    text-align: center;
+    margin-top: 8%;
+    font-size: 100%;
+    
+}
+.orange {
+    color: orange;
+    margin-top: 5%;
+    font-size: 300%;
+}
+.white {
+    color: black;
+    margin: 3%;
+    width: 80%;
+    margin-left: 10%;
+    font-size: 180%;
+    text-align: left;
+}
+
+.down {
+    margin-top: 60%;
+    font-size: 250%;
+}
+.down2 {
+    margin-top: 7%;
+    font-size: 200%;
+}
+
+.nav-bar {
+    width: 100%;
+    height: 10vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    margin-top: -7%;
+}
+
+.nav-div {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.current-nav-item {
+    color: orange;
+    text-decoration: none;
+}
+
+.nav-item{
+    color: white;
+    text-decoration: none;
+}
+
+.nav-item:hover {
+    color: orange;
+    transition: .5s;
+}
+
+
+.footer {
+    border-top: 2px solid orange;
+    height: 60vh;
+    background-color: rgb(83, 83, 83);
+    overflow: hidden;
+    margin-top: 5%;
+}
+
+.feedback-section {
+    display: flex;
+    justify-content: center;
+    height: 25vh;
+    margin-top: 10vh;
+}
+
+.made-in-abyss {
+    text-align: center;
+    margin-top: 5vh;
+    font-size: 200%;
+}
+
+.foot-link-one {
+    color: orange;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.foot-link-one:hover {
+    color: white;
+    transition: 0.2s;
+}
+
+.foot-email {
+    height: 20vh;
+    width: 35%;
+}
+
+.feed {
+    text-align: center;
+    color: orange;
+    margin-top: 2vh;
+}
+
+.fo {
+    text-align: center;
+    margin-top: 3vh;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: white;
+    font-size: 120%;
+    transition: 0.3s;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+    color: orange;
+    transition: 0.2s;
+}
+
+.trademark {
+    text-align: center;
+    color: white;
+    margin-top: 10vh;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.6s;
+    padding: 40px 100px;
+}
+header .logo {
+    position: relative;
+    font-weight: 700;
+    color: black;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+
+header ul li {
+
+    list-style: none;
+    font-size: 3em;
+}
+
+header.sticky {
+    padding: 5px 100px;
+    background: #fff;
+}
+header.sticky .logo,
+header.sticky ul li a {
+    color: #000;
+}
+.flexbox-container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    margin-right: 25%;
+    
+}
+.flexbox-container3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -37.2%;
+    margin-left: 25%; 
+}
+
+.flexbox-item-6 {
+    background-color: white;
+    width: 350px;
+    color: black;
+    align-self: center;
+    text-align: center;
+    height: 25vh;
+    border: 1px solid black;
+}
+.flexbox-item-7 {
+    background-color: white;
+    color: black;
+    width: 350px;
+    text-align: center;
+    height: 25vh;
+    border: 1px solid black;
+}
+.flexbox-item-8 {
+    background-color: white;
+    width: 350px;
+    text-align: center;
+    color: black;
+    height: 25vh;
+    border: 1px solid black;
+}
+
+.flexbox-item-9 {
+    background-color: white;
+    width: 350px;
+    color: black;
+    align-self: center;
+    text-align: center;
+    height: 25vh;
+    border: 1px solid black;
+}
+.flexbox-item-11 {
+    background-color: white;
+    width: 350px;
+    text-align: center;
+    color: black;
+    height: 50vh;
+    border: 1px solid black;
+    background-color: #F5F5F5;
+}
+
+.checkout {
+    color: black;
+    text-align: center;
+    font-size: 280%;
+    margin-top: 3%;
+}
+
+.toppers {
+    color: black;
+    font-size: 170%;
+    font-weight: 900;
+    margin-right: 24%;
+}
+
+.boppers {
+    color: grey;
+    font-size: 120%;
+    margin-top: 5%;
+    text-align: left;
+    width: 280px;
+    margin-left: 10%;
+
+}
+.boppers1 {
+    color: grey;
+    font-size: 120%;
+    margin-top: 10%;
+    text-align: left;
+    width: 280px;
+    margin-top: 50%;
+
+}
