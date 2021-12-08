@@ -20,16 +20,18 @@ $(document).ready(function(){
     if(storedName === "Admin" && storedPassword === "password01"){
         $(".hidden").removeClass("hidden");
     }
-    // if(storedMenu != null){
-    //     $(".menu").html(storedMenu);
-    // }
+    if(storedMenu != null){
+        $(".menu").html(storedMenu);
+        console.log("stored menu");
+    }
 })
 
 // Saves menu page to local storage
 $(window).on("unload", function(){
     if(storedName === "Admin" && storedPassword === "password01"){
-        menu = $(".menu");
-        localStorage.setItem("menu" , menu.html());
+        // menu = $(".menu");
+        var menu = $("#menu")[0].outerHTML;
+        localStorage.setItem("menu" , menu);
     }
     else {
         return nothing
@@ -79,15 +81,9 @@ $(".food-div").click(function(){
 
 // Function to add items to cart on click
 function moveToCart(item,price) {
-    //  var $div = $("<div>", {"class": "items"});
     var name = $("<p>" + item + "" + "$" + price + "</p>");
     name.addClass("item");
-    //  var cartPrice = $("<p>" + price + "</p>" , {"class": "cart-price"});
-    //  var inp = $("<input>" , {"type": "number" , "class" : "quantity", "min" : "1"})
-    //  $(".cart-items").append($div);
     $(".cart-items").append(name);
-    //  $(".items").append(cartPrice);
-    //  $(".items").append(inp);
 }
 
 // Updates total in cart whenever price changes are made
@@ -99,14 +95,17 @@ function updateTotal(itemPrice){
     $("#total").text(Math.round(newTotal * 100) / 100);
 }
 
-$(".items").click(function(){
-    $(this).remove();    
-    console.log("working");
-    $(".items").click(function(){
+// Delete from cart function
+$(document).ready(function(){
+    $(document).on("click",".item", function(){
         $(this).remove();
-        console.log("might be working idk.");
-})
-})
+        console.log(this)
+        console.log("new test");
+        var num = $(this).text().replace(/[^0-9]/gi, '');
+        console.log(parseInt(num, 10));
+        updateTotal(-num);
+    });
+});
 
 // Sign in button adds name and password to local storage and name to nav bar
 $("#sign-btn").click(function(){
