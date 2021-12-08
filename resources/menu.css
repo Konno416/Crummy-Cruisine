@@ -282,3 +282,10 @@ header.sticky ul li a {
 .hidden {
     display: none;
 }
+
+.receipt a  {
+    text-decoration: none;
+}
+.receipt  {
+    margin-top: 5%;
+}

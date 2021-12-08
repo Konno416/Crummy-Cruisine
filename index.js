@@ -79,15 +79,15 @@ $(".food-div").click(function(){
 
 // Function to add items to cart on click
 function moveToCart(item,price) {
-     var $div = $("<div>", {"class": "items"});
+    //  var $div = $("<div>", {"class": "items"});
     var name = $("<p>" + item + "" + "$" + price + "</p>");
     name.addClass("item");
-     var cartPrice = $("<p>" + price + "</p>" , {"class": "cart-price"});
-     var inp = $("<input>" , {"type": "number" , "class" : "quantity", "min" : "1"})
-     $(".cart-items").append($div);
+    //  var cartPrice = $("<p>" + price + "</p>" , {"class": "cart-price"});
+    //  var inp = $("<input>" , {"type": "number" , "class" : "quantity", "min" : "1"})
+    //  $(".cart-items").append($div);
     $(".cart-items").append(name);
-     $(".items").append(cartPrice);
-     $(".items").append(inp);
+    //  $(".items").append(cartPrice);
+    //  $(".items").append(inp);
 }
 
 // Updates total in cart whenever price changes are made
@@ -99,12 +99,12 @@ function updateTotal(itemPrice){
     $("#total").text(Math.round(newTotal * 100) / 100);
 }
 
-$("div").click(function(){
-    $(this).remove(".items");    
+$(".items").click(function(){
+    $(this).remove();    
     console.log("working");
-    $("div").click(function(){
-        $(this).remove(".items");
-        console.log("notworkkssdsadmasdj");
+    $(".items").click(function(){
+        $(this).remove();
+        console.log("might be working idk.");
 })
 })
 
