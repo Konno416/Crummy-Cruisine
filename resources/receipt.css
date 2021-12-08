@@ -89,6 +89,7 @@ body {
     color: orange;
     text-decoration: none;
     transition: 0.2s;
+    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
 }
 
 .foot-link-one:hover {
@@ -179,8 +180,8 @@ header.sticky ul li a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: -37.2%;
-    margin-left: 25%; 
+    margin-top: -34.3%;
+    margin-left: 32%; 
 }
 
 .flexbox-item-6 {
@@ -258,5 +259,14 @@ header.sticky ul li a {
     text-align: left;
     width: 280px;
     margin-top: 50%;
+
+}
+.boppers2 {
+    color: grey;
+    font-size: 120%;
+    margin-top: 5%;
+    text-align: left;
+    width: 280px;
+    margin-left: 10%;
 
 }
