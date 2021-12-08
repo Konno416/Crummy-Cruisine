@@ -11,8 +11,7 @@ body {
 
 .daHead {
     border-bottom: 2px solid orange;
-    background-image: linear-gradient(rgba(0.2, 0.2, 0.2, 0.2), rgba(0, 0, 0, 1)),
-    url("https://media1.giphy.com/media/7WDpgeYllwXWCTn0I8/source.gif");
+
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
