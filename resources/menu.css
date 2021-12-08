@@ -9,7 +9,8 @@ body {
     text-align: center;
     margin-top: 8%;
     font-size: 100%;
-    color:white
+    color:white;
+    background-color: tomato;
 }
 
   .space {
@@ -61,6 +62,41 @@ height: 30vh;
         border: 3px hidden #333;
         background-color: #dfdfdf ;
     }
+    .flexbox-item4 {
+        height: 30vh;
+            width: 85%;
+            margin-top: 17.5%;
+            border: 3px hidden #333;
+            background-color: #dfdfdf ;
+        }
+        .flexbox-item5 {
+            height: 30vh;
+                width: 85%;
+                margin-top: 37%;
+                border: 3px hidden #333;
+                background-color: #dfdfdf ;
+            }
+            .flexbox-item6 {
+                height: 30vh;
+                    width: 85%;
+                    margin-top: 22.5%;
+                    border: 3px hidden #333;
+                    background-color: #dfdfdf ;
+                }
+                .flexbox-item7 {
+                    height: 30vh;
+                        width: 85%;
+                        margin-top: 23.9%;
+                        border: 3px hidden #333;
+                        background-color: #dfdfdf ;
+                    }
+                    .flexbox-item8 {
+                        height: 30vh;
+                            width: 85%;
+                            margin-top: 16%;
+                            border: 3px hidden #333;
+                            background-color: #dfdfdf ;
+                        }
 
 .nav-bar {
     width: 100%;
@@ -237,4 +273,19 @@ header.sticky ul li a {
     margin-top: 4%;
     display: flex;
     justify-content: center;
+}
+
+.quantity {
+    width: 3%;
+}
+
+.hidden {
+    display: none;
+}
+
+.receipt a  {
+    text-decoration: none;
+}
+.receipt  {
+    margin-top: 5%;
 }

@@ -11,8 +11,8 @@ body {
 
 .daHead {
     border-bottom: 2px solid orange;
-    background-image: linear-gradient(rgba(70, 83, 82, 0.7), rgba(70, 83, 82, 0.7)),
-    url("https://media4.giphy.com/media/26FL1soZ3STRDSLGU/giphy.gif ");
+    background-image: linear-gradient(rgba(0.2, 0.2, 0.2, 0.2), rgba(0, 0, 0, 1)),
+    url("https://media1.giphy.com/media/7WDpgeYllwXWCTn0I8/source.gif");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -23,6 +23,7 @@ body {
     color: white;
     padding-top: 35vh;
     font-size: 300%;
+    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
 }
 
 .wel {
@@ -79,6 +80,7 @@ body {
     text-align: center;
     margin-top: 5vh;
     font-size: 200%;
+    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
 }
 
 .foot-link-one {
@@ -181,7 +183,7 @@ header.sticky ul li a {
 
 .checkOut {
     height: 85vh;
-    background-color: (87, 87, 87);
+    background-color: rgb(87, 87, 87);
     border-bottom: 2px solid orange;
 }
 
@@ -191,7 +193,8 @@ header.sticky ul li a {
     font-size: 200%;
     color: orange;
     text-decoration: underline;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.1rem;
+    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
 }
 
 .checkPara {
@@ -238,6 +241,7 @@ header.sticky ul li a {
     margin-left: 2.5%;
     background-color: gray;
     overflow: hidden;
+    box-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
 .checkImages {
@@ -257,17 +261,144 @@ header.sticky ul li a {
 }
 
 .allAbout {
-    height: 80vh;
+    height: 90vh;
     background-color: gray;
     
 }
 
 .aboutHead {
     text-align: center;
-    padding-top: 10vh;
+    padding-top: 6vh;
+    padding-bottom: 10vh;
     font-size: 200%;
     color: orange;
     text-decoration: underline;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.1rem;
+    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
 }
 
+.aboutPara {
+    text-align: center;
+    padding-top: 10vh;
+    font-size: 150%;
+    color: white;
+    margin: 3vh;
+}
+
+.check {
+    text-align: center;
+    font-size: 120%;
+    padding-top: 1vh;
+}
+
+.abouts {
+    margin: 5vh;
+    height: 58vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.aboutDiv1 {
+    height: 58vh;
+    width: 45%;
+    background-color: rgb(87, 87, 87);
+    box-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+.aboutDiv2 {
+    height: 58vh;
+    width: 45%;
+    background-color: rgb(87, 87, 87);
+    box-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+.Div2Img {
+    width:100%;
+    height: 58vh;
+    opacity: 0.8;
+}
+
+.customers-review {
+    height: 120vh;
+    border-top: 2px solid orange;
+    overflow: hidden;
+}
+
+.customers-review-title {
+    color: orange;
+    text-align: center;
+    font-size: 200%;
+    padding-top: 10vh;
+    text-decoration: underline;
+    letter-spacing: 0.1rem;
+    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+}
+
+.reviews-btns {
+    display: flex;
+    justify-content: space-evenly;
+    width: 25.996533795493935vh;
+    height: 17.33102253032929vh;
+    position: relative;
+    left: 173.3102253032929vh;
+    top: 17.33102253032929vh;
+}
+
+#previous {
+    color: white;
+    border: none;
+    background-color: gray;
+    height: 3.466204506065858vh;
+}
+
+#next {
+    color: white;
+    border: none;
+    background-color: gray;
+    height: 3.466204506065858vh;
+}
+
+.reviews {
+    overflow: hidden;
+    background-color: gray;
+    display: flex;
+    margin-top: 10vh;
+    margin-left: 20vh;
+    width: 80%;
+    height: 70vh;
+    justify-content: center;
+    box-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+.review {
+    width: 100%;
+    padding-left: 30vh;
+    padding-top: 10vh;
+}
+
+.review-para {
+    color: white;
+    font-size: 150%;
+    width: 85%;
+    text-align: center;
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 8.665511265164644vh;
+    height: 8.665511265164644vh;
+    border-radius: 50%;
+}
+
+.avatar-name {
+    display: flex;
+    margin-left: 41vh;
+    margin-top: 8.665511265164644vh;
+}
+
+.name {
+    color: white;
+    font-size: 140%;
+    margin-top: 2.4263431542461005vh;
+    margin-left: 2.4263431542461005vh;
+}
