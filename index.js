@@ -131,6 +131,7 @@ $("#log-btn").click(function(){
     }
 })
 
+// slick function for homepage
 $(document).ready(function(){
     $('.reviews').slick({
         infinite: true,
