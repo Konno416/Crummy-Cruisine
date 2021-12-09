@@ -1,6 +1,7 @@
 const storedName = localStorage.getItem("username");
 const storedPassword = localStorage.getItem("password");
 const storedMenu = localStorage.getItem("menu");
+const storedCart = localStorage.getItem("cart");
 const nothing = "nothing"
 
 window.addEventListener("scroll" , function() {
@@ -141,3 +142,23 @@ $(document).ready(function(){
         prevArrow: $('#previous'),
     });
 });
+
+
+$(document).ready(function(){
+    $(document).on("click",".receipt" , function(){
+        var cart = $(".cart-items")[0].outerHTML;
+        localStorage.setItem("cart",cart);
+        var cartTotal = $("#total")[0].outerHTML;
+        localStorage.setItem("total", cartTotal);
+    })
+})
+
+$(document).ready(function(){
+    if (storedCart != null){
+        console.log("receipt check")
+        var receiptCart = $("#receipt-cart");
+        receiptCart.html(storedCart)
+        var receiptTotal = $(".total");
+        receiptTotal.html(receiptTotal);
+    }
+})
