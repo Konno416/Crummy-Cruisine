@@ -1,6 +1,6 @@
 const storedName = localStorage.getItem("username");
 const storedPassword = localStorage.getItem("password");
-const storedMenu = localStorage.getItem("menu");
+var storedMenu = localStorage.getItem("menu");
 const nothing = "nothing"
 
 window.addEventListener("scroll" , function() {
@@ -17,19 +17,28 @@ $(document).ready(function(){
     if(storedName != null){
         $(".logout").removeClass("hidden");
     }
+    if(storedName != "Admin" && storedPassword != "password01"){
+        buttonDelete = $(".btn-delete");
+        buttonEdit = $(".btn-edit");
+        buttonDelete.addClass("hidden");
+        buttonEdit.addClass("hidden");
+    }
     if(storedName === "Admin" && storedPassword === "password01"){
         $(".hidden").removeClass("hidden");
     }
+})
+
+$(document).ready(function(){
     if(storedMenu != null){
-        $(".menu").html(storedMenu);
-        console.log("stored menu");
+        console.log("This should be working");
+        var update = $("#menu");
+        update.html(storedMenu);
     }
 })
 
 // Saves menu page to local storage
 $(window).on("unload", function(){
     if(storedName === "Admin" && storedPassword === "password01"){
-        // menu = $(".menu");
         var menu = $("#menu")[0].outerHTML;
         localStorage.setItem("menu" , menu);
     }
@@ -63,20 +72,23 @@ $(".logout").click(function(){
 })
 
 // Function to get values of name and price from food div
-$(".food-div").click(function(){
-    if(storedName === "Admin" && storedPassword === "password01"){
-        return nothing
-    }
-    else {
-        var div = $(this);
-        var item = div.children(".item-name").text();
-        var price = div.children(".item-price").text();
-        console.log(item);
-        console.log(price);
-        alert("Item has been added to cart")
-        moveToCart(item,price)
-        updateTotal(price)
-    }
+$(document).ready(function(){
+    $(document).on("click",".food-div", function(){
+        if(storedName === "Admin" && storedPassword === "password01"){
+            console.log("returning nothing");
+            return nothing
+        }
+        else {
+            var div = $(this);
+            var item = div.children(".item-name").text();
+            var price = div.children(".item-price").text();
+            console.log(item);
+            console.log(price);
+            alert("Item has been added to cart")
+            moveToCart(item,price)
+            updateTotal(price)
+        }
+    })
 })
 
 // Function to add items to cart on click
