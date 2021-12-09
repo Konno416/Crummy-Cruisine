@@ -2,6 +2,8 @@ const storedName = localStorage.getItem("username");
 const storedPassword = localStorage.getItem("password");
 const storedMenu = localStorage.getItem("menu");
 const nothing = "nothing"
+var storedNames = []
+var storedPasswords = []
 
 window.addEventListener("scroll" , function() {
     var header = document.querySelector("header");
@@ -81,7 +83,7 @@ $(".food-div").click(function(){
 
 // Function to add items to cart on click
 function moveToCart(item,price) {
-    var name = $("<p>" + item + "" + "$" + price + "</p>");
+    var name = $("<p>" + item + "—" + "$" + price + "</p>");
     name.addClass("item");
     $(".cart-items").append(name);
 }
@@ -111,11 +113,23 @@ $(document).ready(function(){
 $("#sign-btn").click(function(){
     var username = $("#username").val();
     var password = $("#password").val();
+    storedNames.push(username)
+    storedPasswords.push(password)
+    localStorage.setItem("usernames", JSON.stringify(storedNames));
+    localStorage.setItem("passwords", JSON.stringify(storedPasswords));
     localStorage.setItem("username", username);
     localStorage.setItem("password", password);
     $("#username").val("");
     $("#password").val("");
     $("#nav-name").text(username);
+})
+
+$(window).on('load', function() {
+    if(localStorage.getItem("usernames") != null){
+        storedNames = JSON.parse(localStorage.getItem("usernames"));
+        storedPasswords = JSON.parse(localStorage.getItem("passwords"));
+        console.log("working")
+    }
 })
 
 // Admin login
@@ -128,6 +142,17 @@ $("#log-btn").click(function(){
         $("#username-log").val("");
         $("#password-log").val("");
         $("#nav-name").text(username);
+    }
+    else{
+        for(let i=0; i<=storedNames.length; i++){
+            if ((username === storedNames[i]) && (password === storedPasswords[i])) {
+                localStorage.setItem("username", storedNames[i]);
+                localStorage.setItem("password", storedNames[i]);
+                $("#username-log").val("");
+                $("#password-log").val("");
+                $("#nav-name").text(storedNames[i]);
+            }
+        }
     }
 })
 
