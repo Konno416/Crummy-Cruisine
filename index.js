@@ -2,6 +2,7 @@ const storedName = localStorage.getItem("username");
 const storedPassword = localStorage.getItem("password");
 const storedMenu = localStorage.getItem("menu");
 const storedCart = localStorage.getItem("cart");
+const storedTotal = localStorage.getItem("total");
 const nothing = "nothing"
 var storedNames = []
 var storedPasswords = []
@@ -180,22 +181,27 @@ $(document).ready(function(){
     });
 });
 
-
+// Stores cart items to local storage when going to checkout page
 $(document).ready(function(){
     $(document).on("click",".receipt" , function(){
         var cart = $(".cart-items")[0].outerHTML;
         localStorage.setItem("cart",cart);
-        var cartTotal = $("#total")[0].outerHTML;
+        var cartTotal = $(".total").text();
         localStorage.setItem("total", cartTotal);
     })
 })
 
+// Appends the cart items to the checkout page
 $(document).ready(function(){
     if (storedCart != null){
         console.log("receipt check")
         var receiptCart = $("#receipt-cart");
         receiptCart.html(storedCart)
-        var receiptTotal = $(".total");
-        receiptTotal.html(receiptTotal);
+        var receiptTotal = $("#cart-total");
+        receiptTotal.html(storedTotal);
+        let children = $(".cart-items").children().length;
+        let estTime = 10 + children;
+        $("#est-time").text(estTime);
+        console.log(children);
     }
 })
