@@ -27,7 +27,7 @@
             <h2 class="checkout">Checkout</h2>
             <div class="flexbox-container2">
                 <div class="flexbox-item flexbox-item-6" ><p class="toppers">Ordering from</p><p class="boppers">Crummy Cuisine - Lancaster</p><p class="boppers">750 E King St</p><p class="boppers"> Lancaster, PA 17602</p></div>
-                <div class="flexbox-item flexbox-item-7" ><p class="toppers">Order type</p><p class="boppers">Type: Pickup</p><p class="boppers">When: ASAP (<span id="est-time">10</span> mins est.)</p></div>
+                <div class="flexbox-item flexbox-item-7" ><p class="toppers">Order type</p><p class="boppers">Type: Pickup</p><p class="boppers">When: (<span id="est-time">10</span> mins est.)</p></div>
                 <div class="flexbox-item flexbox-item-8" ><section class="cart-section"><h2 class="header">Order Summary</h2><div class="cart-items"></div><div class="items" id="receipt-cart"></div><div id="cart-total"><p>Total: $</p><p>0</p></div></section></div>
                 
                 </div>
@@ -38,10 +38,13 @@
         <section>
             <div class="flexbox-container3">
                 <div class="flexbox-item flexbox-item-9" >
+                    <form>
                     <p class="toppers">Payment</p>
-                    <input type="radio" class="payment-input">Cash</p>
-                    <input type="radio" class="payment-input">Card</p>
-                    <p class="boppers"> Lancaster, PA 17602</p>
+                    <input type="radio" name="payment" id="cash" class="payment-input">
+                    <label for="cash">Cash</label><br>
+                    <input type="radio" name="payment" id="card" class="payment-input">
+                    <label for="card">Card</label>
+                    </form>
                 </div>
                 <div class="flexbox-item flexbox-item-11" ><p class="toppers">Place Order</p><p class="boppers">Subtotal, taxes or whatever</p><p class="boppers1">Place order bar for confirmation</p></div>
                 

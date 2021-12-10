@@ -275,4 +275,5 @@ header.sticky ul li a {
     color: red;
     font-size: 120%;
     text-align: left;
+    padding-right: 100vh;
 }
