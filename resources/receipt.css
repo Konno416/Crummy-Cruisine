@@ -270,3 +270,9 @@ header.sticky ul li a {
     margin-left: 10%;
 
 }
+
+.payment-input {
+    color: red;
+    font-size: 120%;
+    text-align: left;
+}
