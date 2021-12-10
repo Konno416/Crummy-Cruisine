@@ -51,21 +51,25 @@ $(window).on("unload", function(){
     }
 })
 
-// Function that deletes parent div on click of delete button
-$(".btn-delete").click(function(){
-    $(this).parent().remove();
-})
-
-// Allows admin to edit menu options
-$(".btn-edit").click(function(){
-    console.log("edit");
-    var name = prompt("Item Name", "Name");
-    var price = prompt("Item Price", "Price");
-    var img = prompt("Picture URL", "Img URL");
-    var parent = $(this).parent();
-    parent.children(".item-name").text(name);
-    parent.children(".item-price").text(price);
-    parent.children("img").attr("src", img);
+// Allows admin to edit and delete menu options
+$(document).ready(function(){
+    $(document).on("click",".btn-edit",function(){
+        console.log("edit");
+        var name = prompt("Item Name", "Name");
+        var price = prompt("Item Price", "Price");
+        var img = prompt("Picture URL", "Img URL");
+        var parent = $(this).parent();
+        parent.children(".item-name").text(name);
+        parent.children(".item-price").text(price);
+        parent.children("img").attr("src", img);
+    })
+    $(document).on("click",".btn-delete",function(){
+        $(this).parent().remove();
+    })
+    $(document).on("click",".btn-add",function(){
+        var newDiv = $("<div class='food-div'><img class='flexbox-item6 flexbox-item-7' src='https:'><h3 class='item-name'></h3><h4 class='item-price'></h4><button class='btn-delete'>Delete</button><button class='btn-edit'>Edit</button></div>");
+        $(this).parent().append(newDiv);
+    })
 })
 
 // Button to log out and clear local storage
