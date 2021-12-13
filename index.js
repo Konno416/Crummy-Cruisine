@@ -21,15 +21,20 @@ $(document).ready(function(){
     if(storedName != null){
         $(".logout").removeClass("hidden");
     }
-    if(storedName != "Admin" && storedPassword != "password01"){
-        buttonDelete = $(".btn-delete");
-        buttonEdit = $(".btn-edit");
-        buttonDelete.addClass("hidden");
-        buttonEdit.addClass("hidden");
-    }
     if(storedName === "Admin" && storedPassword === "password01"){
         $(".hidden").removeClass("hidden");
     }
+})
+
+$(document).ready(function(){
+    jQuery(window).on("load",function(){
+        if(storedName != "Admin" && storedPassword != "password01"){
+            console.log("buttons now hidden");
+            $(".btn-add").addClass("hidden");
+            $(".btn-edit").addClass("hidden");
+            $(".btn-delete").addClass("hidden");
+        }
+    })
 })
 
 $(document).ready(function(){
