@@ -17,6 +17,7 @@ window.addEventListener("scroll" , function() {
 $(document).ready(function(){
     if(storedName != null){
         $("#nav-name").text(storedName);
+        $(".nav-name").text(storedName);
     }
     if(storedName != null){
         $(".logout").removeClass("hidden");
@@ -56,6 +57,22 @@ $(window).on("unload", function(){
     }
 })
 
+$(document).ready(function(){
+    $(document).on("click",".confirm-order",function(){
+        var finalCart = $("#final-cart");
+        finalCart.html(storedCart);
+        var tipAmount = $(".tip").val();
+        var total = localStorage.getItem("finalTotal");
+        var finalTotal = Number(tipAmount) + Number(total);
+        console.log(tipAmount);
+        console.log(total);
+        console.log(finalTotal);
+        var finalDiv = $("<div class='total'><p>Total: $</p><p id='total'>" +finalTotal+"</p></div>");
+        $(".final-total").html(finalDiv);
+        $(".final-name").removeClass("hidden");
+    })
+})
+
 // Allows admin to edit and delete menu options
 $(document).ready(function(){
     $(document).on("click",".btn-edit",function(){
@@ -77,7 +94,7 @@ $(document).ready(function(){
     })
 })
 
-// Button to log out and clear local storage
+// Button to log out and clear local storage for current name and password
 $(".logout").click(function(){
     $("#nav-name").text("Login/Sign Up")
     delete localStorage.username
@@ -115,6 +132,7 @@ function moveToCart(item,price) {
 function updateTotal(itemPrice){
     var total = $("#total").val();
     var newTotal = Number(total) + Number(itemPrice);
+    localStorage.setItem("finalTotal", newTotal);
     console.log(newTotal);
     $("#total").val(Math.round(newTotal * 100) / 100);
     $("#total").text(Math.round(newTotal * 100) / 100);

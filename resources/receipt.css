@@ -301,3 +301,13 @@ header.sticky ul li a {
     height: 3vh;
     margin: 0 auto;
 }
+
+.total {
+    margin-top: 4%;
+    display: flex;
+    justify-content: center;
+}
+
+.hidden {
+    display: none;
+}
