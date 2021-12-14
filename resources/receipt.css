@@ -240,7 +240,7 @@ header.sticky ul li a {
     color: black;
     font-size: 170%;
     font-weight: 900;
-    margin-right: 24%;
+    text-align: center;
 }
 
 .boppers {
@@ -269,4 +269,35 @@ header.sticky ul li a {
     width: 280px;
     margin-left: 10%;
 
+}
+
+.payment-input {
+    color: red;
+    font-size: 120%;
+    text-align: left;
+}
+
+.payment-div {
+    padding-top: 1vh;
+}
+
+.tips-section {
+    height: 9vh;
+}
+
+.tips {
+    padding-top: 2vh;
+    font-weight: bold;
+    font-size: 110%;
+    padding-bottom: 1vh;
+}
+
+.tip {
+    height: 2vh;
+    text-align: center;
+}
+
+.confirm-order {
+    height: 3vh;
+    margin: 0 auto;
 }

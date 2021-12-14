@@ -2,6 +2,7 @@ const storedName = localStorage.getItem("username");
 const storedPassword = localStorage.getItem("password");
 const storedMenu = localStorage.getItem("menu");
 const storedCart = localStorage.getItem("cart");
+const storedTotal = localStorage.getItem("total");
 const nothing = "nothing"
 var storedNames = []
 var storedPasswords = []
@@ -20,19 +21,28 @@ $(document).ready(function(){
     if(storedName != null){
         $(".logout").removeClass("hidden");
     }
+    if(storedName != "Admin" && storedPassword != "password01"){
+        buttonDelete = $(".btn-delete");
+        buttonEdit = $(".btn-edit");
+        buttonDelete.addClass("hidden");
+        buttonEdit.addClass("hidden");
+    }
     if(storedName === "Admin" && storedPassword === "password01"){
         $(".hidden").removeClass("hidden");
     }
+})
+
+$(document).ready(function(){
     if(storedMenu != null){
-        $(".menu").html(storedMenu);
-        console.log("stored menu");
+        console.log("This should be working");
+        var update = $("#menu");
+        update.html(storedMenu);
     }
 })
 
 // Saves menu page to local storage
 $(window).on("unload", function(){
     if(storedName === "Admin" && storedPassword === "password01"){
-        // menu = $(".menu");
         var menu = $("#menu")[0].outerHTML;
         localStorage.setItem("menu" , menu);
     }
@@ -41,21 +51,25 @@ $(window).on("unload", function(){
     }
 })
 
-// Function that deletes parent div on click of delete button
-$(".btn-delete").click(function(){
-    $(this).parent().remove();
-})
-
-// Allows admin to edit menu options
-$(".btn-edit").click(function(){
-    console.log("edit");
-    var name = prompt("Item Name", "Name");
-    var price = prompt("Item Price", "Price");
-    var img = prompt("Picture URL", "Img URL");
-    var parent = $(this).parent();
-    parent.children(".item-name").text(name);
-    parent.children(".item-price").text(price);
-    parent.children("img").attr("src", img);
+// Allows admin to edit and delete menu options
+$(document).ready(function(){
+    $(document).on("click",".btn-edit",function(){
+        console.log("edit");
+        var name = prompt("Item Name", "Name");
+        var price = prompt("Item Price", "Price");
+        var img = prompt("Picture URL", "Img URL");
+        var parent = $(this).parent();
+        parent.children(".item-name").text(name);
+        parent.children(".item-price").text(price);
+        parent.children("img").attr("src", img);
+    })
+    $(document).on("click",".btn-delete",function(){
+        $(this).parent().remove();
+    })
+    $(document).on("click",".btn-add",function(){
+        var newDiv = $("<div class='food-div'><img class='flexbox-item6 flexbox-item-7' src='https:'><h3 class='item-name'></h3><h4 class='item-price'></h4><button class='btn-delete'>Delete</button><button class='btn-edit'>Edit</button></div>");
+        $(this).parent().append(newDiv);
+    })
 })
 
 // Button to log out and clear local storage
@@ -66,20 +80,23 @@ $(".logout").click(function(){
 })
 
 // Function to get values of name and price from food div
-$(".food-div").click(function(){
-    if(storedName === "Admin" && storedPassword === "password01"){
-        return nothing
-    }
-    else {
-        var div = $(this);
-        var item = div.children(".item-name").text();
-        var price = div.children(".item-price").text();
-        console.log(item);
-        console.log(price);
-        alert("Item has been added to cart")
-        moveToCart(item,price)
-        updateTotal(price)
-    }
+$(document).ready(function(){
+    $(document).on("click",".food-div", function(){
+        if(storedName === "Admin" && storedPassword === "password01"){
+            console.log("returning nothing");
+            return nothing
+        }
+        else {
+            var div = $(this);
+            var item = div.children(".item-name").text();
+            var price = div.children(".item-price").text();
+            console.log(item);
+            console.log(price);
+            alert("Item has been added to cart")
+            moveToCart(item,price)
+            updateTotal(price)
+        }
+    })
 })
 
 // Function to add items to cart on click
@@ -168,22 +185,27 @@ $(document).ready(function(){
     });
 });
 
-
+// Stores cart items to local storage when going to checkout page
 $(document).ready(function(){
     $(document).on("click",".receipt" , function(){
         var cart = $(".cart-items")[0].outerHTML;
         localStorage.setItem("cart",cart);
-        var cartTotal = $("#total")[0].outerHTML;
+        var cartTotal = $(".total").text();
         localStorage.setItem("total", cartTotal);
     })
 })
 
+// Appends the cart items to the checkout page
 $(document).ready(function(){
     if (storedCart != null){
         console.log("receipt check")
         var receiptCart = $("#receipt-cart");
         receiptCart.html(storedCart)
-        var receiptTotal = $(".total");
-        receiptTotal.html(receiptTotal);
+        var receiptTotal = $("#cart-total");
+        receiptTotal.html(storedTotal);
+        let children = $(".cart-items").children().length;
+        let estTime = 10 + children;
+        $("#est-time").text(estTime);
+        console.log(children);
     }
 })

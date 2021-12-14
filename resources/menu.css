@@ -289,3 +289,8 @@ header.sticky ul li a {
 .receipt  {
     margin-top: 5%;
 }
+.money {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
